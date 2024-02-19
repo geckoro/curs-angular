@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Application for employment
+    </title>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="validatorApplicationForm.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container" id="container-head">
+            <div class="row">
+                <div class="col-xs-6" id="logo">
+                    <img src="https://www.talentingsoftware.ro/wp-content/uploads/2022/05/desktop-color-v2-2.png" class="img-responsive"/>
+                </div>
+                <div class="col-xs-6" id="title">
+                    <h2>Application for employment <small>designed by George</small></h2>
+                </div>
+            </div>
+        </div>
+        <div class="sections">
+            <div class="container" id="container-sections">
+                <div class="alert alert-success alert-dismissible collapse" id="alertSuccess">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Everything seems in order, we will review your application and will contact you as soon as possible.
+                </div>
+                <div class="alert alert-info alert-dismissible collapse" id="alertInfo">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Info!</strong> The fields have been cleared, please proceed with entering your information.
+                </div>
+                <div class="alert alert-danger alert-dismissible collapse" id="alertDanger">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Error!</strong> There is at least one field that you have missed, be sure to have all of them completed!
+                </div>
+                <form>
+                    <div class="section" id="section-personal-information">
+                        <div class="section-text">Personal Information</div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="Enter address">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id="country" placeholder="Enter country">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" placeholder="Enter city">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="state">State</label>
+                                <input type="text" class="form-control" id="state" placeholder="Enter state">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="zipCode">ZIP Code</label>
+                                <input type="text" class="form-control" id="zipCode" placeholder="Enter ZIP Code">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="phone">Phone number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="email">Email Address</label>
+                                <input type="text" class="form-control" id="email" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="dateOfBirth">Date of Birth</label>
+                                <input type="date" class="form-control" id="dateOfBirth" placeholder="Enter date of birth">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section" id="section-position-details">
+                        <div class="section-text">Position Details</div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="position">Position you are applying for</label>
+                                <input type="text" class="form-control" id="position" placeholder="Enter position">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="startDate">Available Start Date</label>
+                                <input type="date" class="form-control" id="startDate" placeholder="Enter start date">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="pay">Desired Pay</label>
+                                <input type="number" class="form-control" id="pay" placeholder="Enter desired pay">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="position">Employment Type</label>
+                                <div class="form-check">
+                                    <div class="form-group col-md-2">
+                                        <input type="radio" class="form-check-input" name="employmentType" id="employmentType1" value="fullTime"> 
+                                        <label for="employmentType1" class="form-check-label">Full-Time</label>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <input type="radio" class="form-check-input" name="employmentType" id="employmentType2" value="partTime">
+                                        <label for="employmentType2" class="form-check-label">Part-Time</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section" id="section-education">
+                        <div class="section-text">Education</div>
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label for="institution1">School/College</label>
+                                <input type="text" class="form-control" id="insiution1">
+                                <input type="text" class="form-control" id="insitution2">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="period1">Period</label>
+                                <input type="text" class="form-control" id="period1">
+                                <input type="text" class="form-control" id="period2">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="degree1">Degree</label>
+                                <input type="text" class="form-control" id="degree1">
+                                <input type="text" class="form-control" id="degree2">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="result1">Result</label>
+                                <input type="text" class="form-control" id="result1">
+                                <input type="text" class="form-control" id="result2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section" id="section-agreement">
+                        <div class="well well-lg">
+                            I certify that all information and answers provided by me above is true and complete to the best of my  knowledge. I  understand  that  if  this  application  leads  to  employment,  any  false  or  misleading information or answer in my application may lead to my employment being terminated.
+                        </div>
+                    </div>
+
+                    <div class="section" id="section-signature">
+                        <div class="section-text">Signature</div>
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label for="nameSignature">Name</label>
+                                <input type="text" class="form-control" id="nameSignature">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="dateSignature">Date</label>
+                                <input type="date" class="form-control" id="dateSignature">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="section" id="section-buttons">
+                    <div class="btn btn-danger" id="resetButton">Reset</div>
+                    <div class="btn btn-primary" id="submitButton">Submit</div>
+                </div>
+            </div>
+        </div>
+      
+    </body>
+</html>
